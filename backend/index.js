@@ -1,5 +1,5 @@
 const userMiddleware = require('./middleware/userMiddleware.js')
-const {Users} = require("../db")
+const { Users } = require("../db/userDB")
 
 const express = require('express');
 const jwt = require('jsonwebtoken');

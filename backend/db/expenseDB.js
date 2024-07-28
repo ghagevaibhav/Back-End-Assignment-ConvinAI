@@ -5,9 +5,9 @@ mongoose.connect('mongodb+srv://admin:oMeyMiDShQNaLpUT@cluster0.cdutnom.mongodb.
 const expenseSchema = new mongoose.Schema({
     amount: {type: Number, required: true},
     description: {type: String, required: true},
-    contributors: {type: Number, required: true}
+    contributors:[{userId: mongoose.Schema.Types.ObjectId, amount: Number}]
 });
 
 const Expenses = mongoose.model('Expenses', ExpenseSchema);
 
-module.exports = Expenses
+module.exports = Expenses   

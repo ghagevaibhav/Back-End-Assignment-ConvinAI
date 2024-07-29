@@ -1,25 +1,10 @@
-const userMiddleware = require('./middleware/userMiddleware.js')
-const { Users } = require("../db/userDB")
-
-const express = require('express');
-const jwt = require('jsonwebtoken');
-const z = require('zod');
-const app = express();
-
+const app = require('./app')
 
 app.use(express.json());
 
-app.post('/createUser', (req, res) => {
-    const username = req.body.username;
-    const email = req.body.email;
-    const phoneNumber = req.body.phoneNumber;
-})
+const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-
-})
-
-app.listen(3000, (req, res) => {
+app.listen(PORT, (req, res) => {
     console.log("Server has started on port 3000");
 })
 

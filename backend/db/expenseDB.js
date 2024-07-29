@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongo-URL')
-
 const expenseSchema = new mongoose.Schema({
     amount: {type: Number, required: true},
     description: {type: String, required: true},
